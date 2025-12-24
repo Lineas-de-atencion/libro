@@ -46,6 +46,7 @@ nav {
   width: 100%;
   background: var(--azul);
   z-index: 1000;
+   overflow: visible;
 }
 
 /* FRANJA BLANCA SÓLIDA + DESVANECIDO SUAVE */
@@ -64,6 +65,7 @@ nav::after {
     rgba(255,255,255,0) 100%
   );
   pointer-events: none;
+    z-index: -1;
 }
 
 
@@ -218,6 +220,7 @@ nav::after {
     /* FADE-IN ANIMATION FOR ELEMENTS APPEARING IN VIEWPORT */
     .fade-in {
       opacity: 0;
+      pointer-events: auto;
       transform: translateY(14px);
       /* Increased durations by 2000ms to make animation 2s slower */
       transition: opacity 2800ms cubic-bezier(.2,.9,.2,1), transform 2620ms cubic-bezier(.2,.9,.2,1);
@@ -292,6 +295,8 @@ nav::after {
 /* Botón */
 .btn-cuadro {
   display: inline-block;
+   position: relative;
+  z-index: 5;
   padding: 0.8rem 2rem;
   font-weight: 700;
   font-size: 1rem;
@@ -657,6 +662,7 @@ escribirTexto();
 
 </body>
 </html>
+
 
 
 
